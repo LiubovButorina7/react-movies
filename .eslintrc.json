@@ -18,5 +18,13 @@
   "plugins": ["react"],
   "rules": {
     "react/prop-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+        "node": {
+            "paths": ["src"],
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+    }
   }
 }
