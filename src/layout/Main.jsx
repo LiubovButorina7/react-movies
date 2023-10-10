@@ -18,7 +18,7 @@ function Main() {
     setResponse('False');
 
     fetch(
-      `http://www.omdbapi.com/?apikey=${API_KEY}&s=${search}${
+      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}${
         type !== 'all' ? `&type=${type}` : ``
       }`
     )
