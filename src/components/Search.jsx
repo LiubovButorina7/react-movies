@@ -1,16 +1,16 @@
-import { useState } from 'react';
-
-function Search({ fetchData }) {
-  const [search, setSearchValue] = useState('');
-  const [type, setType] = useState('all');
-
+function Search({ fetchData, type, search, setSearchValue, setType, setPage, setSearchString }) {
+  
   function handleFind() {
-    fetchData(search, type);
+    setPage(1);
+    setSearchString(search.trim());
+    fetchData();
+    
   }
 
   function handleFilter(typeValue) {
     setType(typeValue);
-    fetchData(search, typeValue);
+    setPage(1);
+    
   }
 
   return (

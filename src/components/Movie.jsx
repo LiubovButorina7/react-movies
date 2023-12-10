@@ -8,28 +8,28 @@ function Movie({ movie }) {
   } = movie;
 
   return (
-    <div id={id} className="card movie">
-      <div className="card-image waves-effect waves-block waves-light">
-        {poster === 'N/A' ? (
+    <div className="card movie hoverable" id={id}>
+      <div className="card-image">
+      {poster === 'N/A' ? (
           <img
-            className="activator"
             src={`https://placehold.jp/300x400.png?text=${title}`}
             alt="Poster"
           />
         ) : (
-          <img className="activator" src={poster} alt="Poster" />
+          <img src={poster} alt="Poster" />
         )}
       </div>
+
       <div className="card-content">
-        <span className="card-title activator grey-text text-darken-4">
+        <span className="card-title grey-text text-darken-4">
           {title}
         </span>
-        <p>
+        <p className="year-type">
           {year} <span className="right">{type}</span>
         </p>
       </div>
     </div>
   );
-}
+        }
 
 export { Movie };
