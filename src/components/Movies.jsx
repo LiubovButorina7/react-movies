@@ -1,10 +1,14 @@
 import { Movie } from './Movie';
+import { useContext } from "react";
+import { MovieContext } from "../Context";
 
-function Movies({ moviesList }) {
+function Movies() {
+  const { movies } = useContext(MovieContext);
+
   return (
     <div className="movies">
     {
-      moviesList.map((movie) => <Movie key={movie.imdbID} movie={movie} />)
+      movies.map((movie) => <Movie key={movie.imdbID} movie={movie} />)
     }  
     </div>
   );

@@ -1,12 +1,20 @@
 function Footer() {
   return (
-    <footer className="page-footer green lighten-4">
+    <footer className="page-footer deep-purple lighten-3">
       <div className="footer-copyright">
         <div className="container">
-          Portfolio Project by Liubov Butorina © {new Date().getFullYear()} Copyright 
-          <a className="grey-text text-lighten-4 right" href="#!">
-            Repo
-          </a>
+          Portfolio Project by Liubov Butorina © {new Date().getFullYear()}{" "}
+          Copyright
+          <span className="right">
+            <a
+              href="https://github.com/LiubovButorina7/react-movies"
+              title="Go to Github.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Repo
+            </a>
+          </span>
         </div>
       </div>
     </footer>

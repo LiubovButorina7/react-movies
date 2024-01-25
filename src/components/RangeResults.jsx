@@ -1,10 +1,13 @@
-export function RangeResults({data}) {
-    const { totalResults, searchString, range1, range2 } = data;
-       
+import { useContext } from "react";
+import { MovieContext } from "../Context";
+
+export function RangeResults() {
+    const { totalResults, searchString, range1, range2 } = useContext(MovieContext);
+
     return (
       <div>
-        <h3 style={{padding: "10px"}}>Found {totalResults} results for &#34;{searchString}&#34;</h3>
-        {totalResults > 0 && <h5 style={{padding: "10px"}}>Showing {range1}-{range2} results</h5>}
+        <h3 className="totalResults">Found {totalResults} results for &#34;{searchString}&#34;</h3>
+        {totalResults > 0 && <h5 className="ranges">Showing {range1}-{range2} results</h5>}
       </div>
     );
 }

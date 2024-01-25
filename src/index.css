@@ -5,15 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('../public/cinema-font.jpg') no-repeat;
 }
 
-nav {
-  padding: 0 2rem;
+.page {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 30;
+  font-size: 2.5rem;
+
+  text-align: center;
+}  
 
 .content {
   min-height: calc(100vh - 70px - 64px);
-  padding: 1.5rem 0;
+  padding: 70px 0 20px 0;
+}
+
+a {
+  color: inherit;
 }
 
 .movies {
@@ -22,21 +43,34 @@ nav {
   gap: 1.5rem;
 }
 
-.search-btn {
-  position: absolute;
-  top: 0rem;
-  right: 0.5rem;
-}
-
 label {
   margin-right: 2rem;
+}
+
+.input-field .prefix {
+  right: 0;
+  text-align: right;
+
+  cursor:pointer;
+}
+
+.input-field .prefix:hover {
+  color: blueviolet;
+}
+
+.input-field .prefix ~ input {
+  margin-left:0;
+  width: 100%;
+  padding-left:10px;
+}
+
+.totalResults, .ranges {
+  padding: 10px;
 }
 
 .movie {
   display: flex;
   flex-direction: column;
-  
-  cursor:pointer;
 }
 
 .card-image {
@@ -53,7 +87,19 @@ label {
 }
 
 .card-title {
-  margin-bottom: 20px;
+  padding-top: 3rem;
+}
+
+.year-type {
+  padding-top: 1rem;
+}
+
+.movie-info {
+  color: rgb(138,43,226);
+}
+
+.movie-info:hover {
+  color: rgb(183, 117, 245);
 }
 
 .pagination { 
@@ -63,5 +109,100 @@ label {
   background-color: white;  
   box-shadow: none;
 
-
+  background: none;
 }
+
+.pagination li {
+  height: auto;
+}
+
+.info {
+  margin: 3rem 0 3rem 0;
+  display:flex;
+  align-items: flex-start;
+}
+
+.movieTitle {
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align:top;
+  margin-bottom: 2rem;
+}
+
+.about-movie {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.plot {
+  margin-bottom: 2rem;
+  max-width: 80%;
+  font-size: 18px;
+  font-style:oblique;
+}
+
+.goBack {
+  font-size: 40px;
+  vertical-align: bottom;
+  cursor: pointer;
+  color: blueviolet;
+}
+
+.goBack:hover {
+  opacity: 60%;
+}
+
+table {
+  font-family: arial;
+  font-size: 16px;
+  width:90%;
+}
+
+tr {
+  border-bottom: none;
+}
+
+td {
+  padding-right: 2rem;
+}
+
+.td-title {
+  color: rgb(106, 106, 110);
+  width: 130px;
+}
+
+.home-page {
+  color:blueviolet;
+}
+
+.home-page:hover {
+  opacity: 70%;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 30px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+
+  .info {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-movie {
+    width: 100%;
+    margin:auto;
+  }
+  
+}
+
+@media (max-width: 570px) {
+  .pagination {
+    margin-bottom: 60px;
+  }
+}  

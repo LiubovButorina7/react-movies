@@ -1,17 +1,19 @@
 function Header() {
   return (
-    <nav className="green darken-1">
-      <div className="nav-wrapper">
-        <a href="#" className="brand-logo">
-          React Movies
-        </a>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li>
-            <a href="!#">Repo</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav className="deep-purple lighten-2">
+        <div className="nav-wrapper">
+          <a
+            href="https://github.com/LiubovButorina7/react-movies"
+            title="Go to Github.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            React Movies
+          </a>
+        </div>
+      </nav>
+    </header>
   );
 }
 

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Movie({ movie }) {
   const {
     imdbID: id,
@@ -6,14 +8,15 @@ function Movie({ movie }) {
     Year: year,
     Type: type,
   } = movie;
-
+  
   return (
     <div className="card movie hoverable" id={id}>
       <div className="card-image">
       {poster === 'N/A' ? (
-          <img
+          <img 
             src={`https://placehold.jp/300x400.png?text=${title}`}
             alt="Poster"
+            
           />
         ) : (
           <img src={poster} alt="Poster" />
@@ -28,8 +31,14 @@ function Movie({ movie }) {
           {year} <span className="right">{type}</span>
         </p>
       </div>
+
+      <div className='card-action'>
+        <Link to={`/about/${id}`}>
+          <span className="movie-info">Learn more</span>
+        </Link>
+      </div>
     </div>
   );
-        }
+}
 
 export { Movie };
