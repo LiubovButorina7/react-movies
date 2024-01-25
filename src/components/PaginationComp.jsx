@@ -1,11 +1,9 @@
-import { Pagination, PaginationItem } from '@mui/material';
+import { Pagination } from '@mui/material';
 import { useContext } from "react";
 import { MovieContext, MovieDispatchContext } from "../Context";
 
-import { Link } from 'react-router-dom';
-
 export function PaginationComp() {
-  const { pagesQty, page, search, type } = useContext(MovieContext);
+  const { pagesQty, page } = useContext(MovieContext);
   const dispatch = useContext(MovieDispatchContext);
 
   const handleChange = (e, p) => {
