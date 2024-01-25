@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-movies/static/css/main.ac9c1e6f.css",
+    "main.js": "/react-movies/static/js/main.23d7c56f.js",
+    "static/media/cinema-font.jpg": "/react-movies/static/media/cinema-font.2a760d98c1f67e81fd1b.jpg",
+    "index.html": "/react-movies/index.html",
+    "main.ac9c1e6f.css.map": "/react-movies/static/css/main.ac9c1e6f.css.map",
+    "main.23d7c56f.js.map": "/react-movies/static/js/main.23d7c56f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac9c1e6f.css",
+    "static/js/main.23d7c56f.js"
+  ]
+}
