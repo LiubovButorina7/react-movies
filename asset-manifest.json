@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-movies/static/css/main.470e842b.css",
+    "main.css": "/react-movies/static/css/main.3c7ba4f6.css",
     "main.js": "/react-movies/static/js/main.ff8eec14.js",
     "static/media/cinema-font.jpg": "/react-movies/static/media/cinema-font.2a760d98c1f67e81fd1b.jpg",
     "index.html": "/react-movies/index.html",
-    "main.470e842b.css.map": "/react-movies/static/css/main.470e842b.css.map",
+    "main.3c7ba4f6.css.map": "/react-movies/static/css/main.3c7ba4f6.css.map",
     "main.ff8eec14.js.map": "/react-movies/static/js/main.ff8eec14.js.map"
   },
   "entrypoints": [
-    "static/css/main.470e842b.css",
+    "static/css/main.3c7ba4f6.css",
     "static/js/main.ff8eec14.js"
   ]
 }
