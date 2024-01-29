@@ -17,6 +17,10 @@ export function Search() {
                 type: "handleFind",  
                 payload: search.trim(),
               });
+              dispatch({
+                type: "setPage",
+                payload: 1,
+              });
             }}>
             search
           </i>
@@ -37,6 +41,10 @@ export function Search() {
                   type: "handleFind",  
                   payload: search.trim(),
                 });
+                dispatch({
+                  type: "setPage",
+                  payload: 1,
+                })
               }
               
             }}
@@ -51,12 +59,16 @@ export function Search() {
               type="radio"
               value="all"
               checked={type === 'all'}
-              onChange={(e) => 
+              onChange={(e) => {
                 dispatch({
                   type: "handleFilter",
                   payload: e.target.value,
-                })
-              }
+                });
+                dispatch({
+                  type: "setPage",
+                  payload: 1,
+                });
+              }}
             />
             <span>All</span>
           </label>
@@ -68,11 +80,16 @@ export function Search() {
               type="radio"
               value="movie"
               checked={type === 'movie'}
-              onChange={(e) => 
+              onChange={(e) => {
                 dispatch({
                   type: "handleFilter",
                   payload: e.target.value,
-                })}
+                });
+                dispatch({
+                  type: "setPage",
+                  payload: 1,
+                });
+              }}  
             />
             <span>Movies only</span>
           </label>
@@ -84,11 +101,16 @@ export function Search() {
               type="radio"
               value="series"
               checked={type === 'series'}
-              onChange={(e) => 
+              onChange={(e) => {
                 dispatch({
                   type: "handleFilter",
                   payload: e.target.value,
-                })}
+                });
+                dispatch({
+                  type: "setPage",
+                  payload: 1,
+                });
+              }}
             />
             <span>Series only</span>
           </label>

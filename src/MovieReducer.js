@@ -44,14 +44,12 @@ export function MovieReducer(movieState, { type, payload }) {
         return {
           ...movieState,
           searchString: payload,
-          page: 1,
         }
       }
       case "handleFilter": {
         return {
           ...movieState,
           type: payload,
-          page: 1,
         }
       }
       default:

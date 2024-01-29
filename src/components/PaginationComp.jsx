@@ -1,6 +1,7 @@
-import { Pagination } from '@mui/material';
 import { useContext } from "react";
 import { MovieContext, MovieDispatchContext } from "../Context";
+
+import { Pagination } from '@mui/material';
 
 export function PaginationComp() {
   const { pagesQty, page } = useContext(MovieContext);

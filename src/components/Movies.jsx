@@ -1,6 +1,7 @@
-import { Movie } from './Movie';
 import { useContext } from "react";
 import { MovieContext } from "../Context";
+
+import { Movie } from './Movie';
 
 function Movies() {
   const { movies } = useContext(MovieContext);

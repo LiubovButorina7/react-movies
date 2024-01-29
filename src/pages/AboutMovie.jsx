@@ -27,7 +27,7 @@ export function AboutMovie() {
       { movie.Response === "False" && navigate(`/about/${id}/not_exist`) } 
       { movie.Response === 'True' && (
         <>
-          
+          <i className="material-icons goBack" title='Back' onClick={goBack}>navigate_before</i>
           <div className="info">    
             <div>
               <img src={movie.Poster === 'N/A' ? `https://placehold.jp/300x400.png?text=${movie.Title}` : movie.Poster} alt="Poster"/>
@@ -84,7 +84,6 @@ export function AboutMovie() {
             </div>
           </div>
           <div className="plot">{movie.Plot === 'N/A' ? '' : movie.Plot}</div>
-          <i className="material-icons goBack" onClick={goBack}>arrow_back</i><b><i style={{fontSize: "25px", color: "blueviolet"}}>Back to movies</i></b>
         </>
         )
       }

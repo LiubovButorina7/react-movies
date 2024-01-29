@@ -1,4 +1,6 @@
 import { useEffect, useReducer } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
 import { MovieContext, MovieDispatchContext } from "../Context";
 import { MovieReducer } from "../MovieReducer";
 
@@ -8,13 +10,11 @@ import { Preloader } from '../components/Preloader';
 import { RangeResults } from '../components/RangeResults';
 import { PaginationComp } from '../components/PaginationComp';
 
-import { useSearchParams } from 'react-router-dom';
-
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const pageSize = 10;
 
-function Homepage() {
+export function Homepage() {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -33,13 +33,31 @@ function Homepage() {
 
   const [movieState, dispatch] = useReducer(MovieReducer, initialMovieState);
 
-  const setURLSearchParams = () => {
+  const setURLSearchParamsFromFilters = () => {
     const params = {};
     params.search = movieState.searchString.trim();
     params.type = movieState.type;
     params.page = movieState.page;
-    
     setSearchParams(params);
+  }
+
+  const setFiltersFromSearchParams = () => {
+    dispatch({
+      type: 'setSearchValue',
+      payload: searchParams.has('search') ? searchParams.get('search').trim() : 'space odyssey'
+    });
+    dispatch({
+      type: 'handleFind',
+      payload: searchParams.has('search') ? searchParams.get('search').trim() : 'space odyssey',
+    });
+    dispatch({
+      type: 'handleFilter',
+      payload: searchParams.has('type') ? searchParams.get('type') : 'all'
+    });
+    dispatch({
+      type: 'setPage',
+      payload: parseInt(searchParams.has('page') ? searchParams.get('page') : 1)
+    });
   }
 
   const getData = () => {
@@ -54,12 +72,10 @@ function Homepage() {
         type: "setMovies",
         payload: data.Search || [],
       });
-                
       dispatch({
         type: "setTotalResults",
         payload: data.totalResults,
       })
-        
       dispatch({
         type: "setPagesQty",
         payload: {totalResults: data.totalResults, pageSize}
@@ -78,10 +94,16 @@ function Homepage() {
   }
   
   useEffect(() => {
+    setURLSearchParamsFromFilters();
     getData();
-    setURLSearchParams();
   // eslint-disable-next-line  
   }, [movieState.searchString, movieState.type, movieState.page]);
+
+  useEffect(() => {
+    setFiltersFromSearchParams();
+    getData();
+  // eslint-disable-next-line    
+  }, [searchParams]);
 
   return (
     <MovieContext.Provider value={movieState}>
@@ -107,6 +129,3 @@ function Homepage() {
     </MovieContext.Provider>
   );
 }
-
-export { Homepage };
-

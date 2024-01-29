@@ -8,20 +8,20 @@
 - React Hooks (useEffect, useReducer, useContext)
 - React Router v6 
 - OMDb API
-- React Pagination Component
 - Materialize CSS
 - CSS custom properties
 - Flexbox
+- React Pagination Component
 
 ## Resources:
 
 - [OMDb API](https://www.omdbapi.com/)
-- [React Pagination Component](https://mui.com/material-ui/react-pagination/)
 - [Materialize CSS](https://materializecss.com/)
+- [React Pagination Component](https://mui.com/material-ui/react-pagination/)
 
 ## Screenshorts:
 
 
 ## Author:
 
-_Liubov Butorina_
+Liubov Butorina

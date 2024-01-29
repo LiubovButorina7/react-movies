@@ -39,7 +39,8 @@ a {
 
 .movies {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-rows: auto auto;
   gap: 1.5rem;
 }
 
@@ -83,7 +84,11 @@ label {
   position: relative;
   width: 100%;
   
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
+}
+
+.card .card-content {
+  padding:12px;
 }
 
 .card-title {
@@ -116,8 +121,12 @@ label {
   height: auto;
 }
 
+nav ul li {
+  transition: none;
+}
+
 .info {
-  margin: 3rem 0 3rem 0;
+  margin: 2rem 0 3rem 0;
   display:flex;
   align-items: flex-start;
 }
@@ -143,10 +152,13 @@ label {
 }
 
 .goBack {
-  font-size: 40px;
-  vertical-align: bottom;
   cursor: pointer;
+  margin-top: 1rem;
+  font-size: 40px;
   color: blueviolet;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: #c9abd3;
 }
 
 .goBack:hover {
@@ -206,3 +218,4 @@ td {
     margin-bottom: 60px;
   }
 }  
+
