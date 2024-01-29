@@ -83,12 +83,15 @@ label {
 .card-content {
   position: relative;
   width: 100%;
-  
-  /*margin-bottom: 1rem;*/
 }
 
 .card .card-content {
-  padding:12px;
+  padding:14px;
+}
+
+.card .card-action {
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .card-title {
