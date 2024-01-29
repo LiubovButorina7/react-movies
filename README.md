@@ -27,19 +27,19 @@
 
 ![](./public/screenshots/react-movies12.png)
 
-![](./public/screenshots/react-movies13.png)
+![](./public/screenshots/react-movies17.png)
 
 ![](./public/screenshots/react-movies14.png)
 
-![](./public/screenshots/react-movies15.png)
-
-![](./public/screenshots/react-movies16.png)
-
-![](./public/screenshots/react-movies17.png)
+![](./public/screenshots/react-movies13.png)
 
 ![](./public/screenshots/react-movies18.png)
 
 ![](./public/screenshots/react-movies19.png)
+
+![](./public/screenshots/react-movies15.png)
+
+![](./public/screenshots/react-movies16.png)
 
 ## Author:
 
