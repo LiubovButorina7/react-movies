@@ -1,4 +1,4 @@
-# React Movies Portfolio Project
+# React Movies Project
 
 - [DEMO](https://liubovbutorina7.github.io/react-movies/)
 
